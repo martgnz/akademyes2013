@@ -1,8 +1,8 @@
 Akademy-es 2013
 =============
-![Group photo](https://github.com/mgonzalezgmz/akademyes2013/blob/gh-pages/static/images/grupoakademyes.jpg)
+![Group photo](static/images/grupoakademyes.jpg)
 
-An interactive article about last Akademy-es, based on [Resonate](https://github.com/jplusplus/resonate2014).
+An interactive article about last Akademy-es in Bilbao, based on [Resonate](https://github.com/jplusplus/resonate2014).
 
 ## Credits
 By [Martín González](https://twitter.com/mgonzalezgmz).
