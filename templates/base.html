@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{g.get('language', 'es')}}">
+
+	<head>
+		<meta charset="utf-8">{#  #}</meta>
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<link rel="shortcut icon" type="image/png" href="{{ url_for("static", filename="logos/kdelogo.png", _external=True) }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:description" content="{% trans %}Entre el 11 y el 12 de julio del 2013 más de 50 desarrolladores, artistas, traductores y entusiastas de KDE participaron en el Akademy-es 2013, la conferencia anual organizada por KDE España.{% endtrans %}">
+		<meta property="og:image" content="{{ url_for("static", filename="images/share2.jpg", _external=True) }}"/>
+		<meta property="og:image" content="{{ url_for("static", filename="images/share3.jpg", _external=True) }}"/>
+		<meta property="og:title" content="{% trans %}Akademy-es 2013{% endtrans %}"/>
+		<meta property="og:site_name" content="KDE España"/>
+		<meta property="og:type" content="article"/>
+		<title>{% trans %}Akademy-es 2013 | La conferencia anual de usuarios de KDE{% endtrans %}</title>
+
+		{% include "css.html" %}
+
+	</head>
+
+	<body class="use-base">
+
+		{% include "header.html" %}
+
+		{% block content %}{% endblock %}
+
+		{% include "footer.html" %}
+
+		{% include "js.html" %}
+
+	</body>
+</html>

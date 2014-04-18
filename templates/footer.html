@@ -1,0 +1,34 @@
+<footer class="footer">
+	<div>
+		<ul class="list-inline logos">
+			<li class="">
+					<img class="jpp_logo" src="{{ url_for("static", filename="logos/kdelogo.png") }}" alt="KDE">
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="row clearfix">
+		{% trans %}
+		<div>Edición y desarrollo: <a href="https://twitter.com/mgonzalezgmz" target="_blank">Martín González</a>.
+		<div><span class="mentions">CC-BY-SA, <a href="http://kde-espana.org/" target="_blank">KDE España</a>.</span></div>
+		<p />
+		<div><span class="mentions">Fotografía grupo:  <a href="http://kde-espana.org/akademy-es2013/fotogrupo.html" target="_blank">Knut Yrvin</a>.</span></div> 
+		<div><span class="mentions">Fotografía Guggenheim: CC-BY-NC-SA, <a href="https://www.flickr.com/photos/dominikmorbitzer/7886187940" target="_blank">Dominik Morbitzer</a>.</span></div>
+		<div><span class="mentions">Footer: CC-BY-SA, <a href="http://subtlepatterns.com/" target="_blank">Subtle Patterns</a>.</span></div> 
+		{% endtrans %}
+	</div>
+	<div class="row github">
+		<img src="{{url_for("static", filename="logos/github.png")}}"/> <a href="https://github.com/mgonzalezgmz/akademyes2013" target="_blank">{% trans %}Repositorio en Github{% endtrans %}</a>
+	</div>
+	<div class="row github">
+		<img src="{{url_for("static", filename="logos/jpp.png")}}"/> <a href="https://github.com/jplusplus/resonate2014" target="_blank">{% trans %}Basado en Resonate | Journalism++{% endtrans %}</a>
+	</div>
+
+	<div class="row thanks">
+		{% trans %}
+		<div>Gracias a Àlex Fiestas y Aleix Pol por su ayuda.</div>
+		<div>Gracias a Baltasar Ortega por el genial <a href="http://kdeblog.com" target="_blank">KDE Blog.</div>
+		{% endtrans %}
+	</div>
+
+</footer>

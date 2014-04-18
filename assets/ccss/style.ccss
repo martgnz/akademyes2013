@@ -1,0 +1,240 @@
+body, html:
+	height      : 100%
+	font-family : 'Georgia', 'serif'
+
+.header:
+	transition-property:background-color, border-color
+	transition-duration:.25s
+	.navbar-brand:
+		img:
+			width:30px
+		span:
+			padding-left: 20px
+			position:relative
+			bottom:2px
+			font-size: .9em
+	&.reverse:
+		background-color: "rgba(34, 34, 34, 0.22)"
+		border-color    : "rgba(0, 0, 0, 0.12)"
+		.navbar-brand:
+			color: white
+		.navbar-nav:
+			.active>a:
+				&:hover:
+					color:white
+				background-color: "rgba(0, 0, 0, 0.7)"
+			>li>a:
+				color: white
+				&:hover:
+					color:white
+	.navbar-nav>li>a:
+		padding-left: 10px
+		padding-right: 10px
+		text-transform:uppercase
+	font-size: .8em
+
+.main:
+	width:100%
+	.main_title:
+		text-align            : center
+		width                 : 100%
+		height                : 2000px
+		margin-bottom         : 30px
+		color                 : white
+		position              : relative
+		opacity: 1
+		.body: //illustration
+			position: absolute
+			background-position   : top
+			background-attachment : fixed
+			background-repeat     : "no-repeat"
+			background-size       : cover
+			transition-duration   : .5s
+			transition-property   : opacity
+			width                 : 100%
+			height                : 100%
+		&.loading:
+			.body:
+				opacity: 0
+			.lead:
+				opacity : 0
+		.lead:
+			font-size   : 4em
+			text-align  : center
+			top         : 45%
+			margin      : auto
+			position    : relative
+			text-shadow: 0px 0px 11px #585858
+			.little:
+				font-size:.3em
+
+	.scroll-indicator:
+		position                          : absolute
+		bottom                            : 25px
+		-webkit-animation-name            : pulsate
+		-webkit-animation-duration        : 1.5s
+		-webkit-animation-timing-function : ease-in-out
+		-webkit-animation-iteration-count : infinite
+		margin-left                       : -20px
+		opacity                           : 0.5
+
+	.article:
+		font-size : 1.25em
+		max-width : 630px
+		padding   : 1em 1.5em
+		line-height: 1.5em
+		.title:
+			font-size: 2.5em
+			line-height: 1.25em
+			padding: 0.2em 0 0.6em 0
+		.subtitle:
+			font-size:1.5em
+			line-height: 2em
+		>.body:first-letter:
+			float       : left
+			font-size   : 500%
+			line-height : .894
+			margin      : 0 .1em 0 0
+			padding     : 0
+			position    : relative
+			top         : 1px
+			left        : 0
+		a:
+			text-decoration:underline
+			color: inherit
+			&:hover:
+				text-decoration:underline
+
+// -------------------------------
+// QUOTE
+.quote:
+	padding     : 1em .5em
+	color       : #575757
+	font-size   : 2em
+	line-height : 1em
+	float:left
+	.body:
+		position:relative
+		line-height: 1.25em
+		&:before:
+			content   :'\"\\201C\"'
+			font-size : 2em
+			left: "-.5em"
+			position:absolute
+		width: 90%
+		float:right
+		&:after:
+			content   :'\"\\201D\"''
+			font-size : 1em
+	& .author:
+		clear: both
+		text-align  : right
+		font-weight : bold
+		font-family : "Helvetica Neue, Helvetica"
+		font-size   : 0.3em
+		&:before:
+			content:'\"\\2014\"'
+		line-height: 1.75em
+		padding-top: 1em
+
+// -------------------------------
+// ILLUSTRATION AND IFRAME
+.illustration, .iframe:
+	position: relative
+	.loader:
+		color:black
+		border-color: "rgba(0,0,0, .7)"
+		&:after:
+			background-color: black
+
+.illustration:
+	margin : 30px 0 30px 0
+	.body:
+		transition-property: opacity
+		transition-duration: .5s
+		opacity:1
+	&.loading .body:
+		opacity: 0
+	&, & .body:
+		background-color    : white
+		background-size     : cover
+		background-position : center
+	.title:
+		position : absolute
+		text-shadow: 0px 0px 11px #585858
+		bottom   : 30px
+		font-size: 3.5em
+		color    : white
+		text-align: center
+		left:0
+		right:0
+		margin-left:auto
+		margin-right:auto
+		line-height: 1em
+
+	&.inside:
+		margin: 20px
+	&.full, &.full .body:
+		width: 100%
+		height: 100%
+	&.right:
+		margin-right:0 !important
+	&.left:
+		margin-left:0 !important
+.legend:
+	font-family : 'Helvetica Neue', 'Helvetica', 'Sans serif'
+	font-size   : .5em
+	font-weight : bold
+	line-height : 1.5em
+	padding-bottom: 20px
+
+.iframe:
+	&.loading iframe:
+		opacity: 0
+	margin              : 20px 0 20px 0
+	transition-property : opacity
+	transition-duration : .5s
+	width               : 100%
+	iframe:
+		transition-property: opacity
+		transition-duration: .5s
+		opacity: 1
+		width: 100%
+// -------------------------------
+// FOOTER
+.footer:
+	//background: #303030;
+	background-image:"url(../images/grey.png)"
+	color: #999999;
+	margin-top: 40px;
+	padding: 20px 20px 40px;
+	text-align: center;
+	img:
+		height:60px
+	.row:
+		margin:	auto
+		padding-top: 20px
+	a:
+		text-decoration:underline
+		color: inherit
+		&:hover:
+			text-decoration:underline
+	.thanks:
+		font-size:.7em
+	.github:
+		img:
+			width: 20px
+			height: 20px
+			margin-right: 5px
+			margin-bottom: 3px
+
+// -------------------------------
+// LOADER
+.loader:
+	opacity:0
+	position:absolute
+	transition-property: opacity
+	transition-duration: .5s
+	.loading &:
+		opacity:1
+//EOF
